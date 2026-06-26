@@ -1,12 +1,13 @@
 
+from config import *
 import mysql.connector
 
 def get_connection():
     conn = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="abcd",  # apna MySQL password
-        database="resume_db"
+        host=DB_HOST,
+        user=DB_USER,
+        password=DB_PASSWORD,
+        database=DB_NAME
     )
     return conn
 
